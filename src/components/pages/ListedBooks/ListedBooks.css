@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.react-tabs__tab--selected {
+  @apply text-[#13131380] font-medium border-[#13131330];
+}

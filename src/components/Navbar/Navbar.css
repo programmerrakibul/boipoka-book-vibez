@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+a.navlinks {
+  @apply text-[#131313cc] text-lg font-['Work_Sans'] font-medium bg-transparent transition-all duration-300 border border-transparent;
+}
+
+a.navlinks:hover,
+a.navlinks.active {
+  @apply text-[#23BE0A] border-[#23BE0A] font-semibold;
+}
+
+.navbar-btn {
+  @apply btn text-base sm:text-lg font-medium sm:font-semibold border-none text-white transition-colors duration-300;
+}
