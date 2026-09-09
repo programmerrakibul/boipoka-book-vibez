@@ -1,7 +1,7 @@
-import { useLocation } from "react-router";
-import Container from "../../Container";
+import Container from "@/components/Container/Container";
+import ReadListContext from "@/contexts/ReadListContext";
 import { useContext } from "react";
-import ReadListContext from "../../../contexts/ReadListContext";
+import { useLocation } from "react-router";
 
 const BookDetails = () => {
   const { handleAddToStorage } = useContext(ReadListContext);

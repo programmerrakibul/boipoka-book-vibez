@@ -1,14 +1,14 @@
-import { ToastContainer } from "react-toastify";
-import Navbar from "../../Navbar/Navbar";
-import { Outlet } from "react-router";
-import ReadListContext from "../../../contexts/ReadListContext";
-import WishlistContext from "../../../contexts/WishlistContext";
-import { useState } from "react";
+import Navbar from "@/components/Navbar/Navbar";
+import ReadListContext from "@/contexts/ReadListContext";
+import WishlistContext from "@/contexts/WishlistContext";
 import {
   addToStorage,
   getStoredData,
   removeFromStorage,
-} from "../../../utilities/local_storage";
+} from "@/utils/local_storage";
+import { useState } from "react";
+import { Outlet } from "react-router";
+import { ToastContainer } from "react-toastify";
 
 const RootLayout = () => {
   const [wishlist, setWishlist] = useState(() => getStoredData("wishlist"));

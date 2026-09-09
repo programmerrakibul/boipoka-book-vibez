@@ -1,6 +1,5 @@
+import Container from "@/components/Container/Container";
 import { Link, NavLink } from "react-router";
-import Container from "../Container";
-import "./Navbar.css";
 
 const Navbar = () => {
   const navStr = ["Home", "Listed Books", "Pages to Read"];

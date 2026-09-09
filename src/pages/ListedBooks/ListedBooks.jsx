@@ -1,14 +1,10 @@
-import Container from "../../Container";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Container from "@/components/Container/Container";
+import ReadBooks from "@/components/ReadBooks/ReadBooks";
+import WishlistBooks from "@/components/WishlistBooks/WishlistBooks";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import ReadBooks from "../../ReadBooks/ReadBooks";
-import WishlistBooks from "../../WishlistBooks/WishlistBooks";
-import "./ListedBooks.css";
-import { useState } from "react";
 
 const ListedBooks = () => {
-  const [sortOrder, setSortOrder] = useState("sort by");
-
   return (
     <section className="py-5 my-10">
       <Container>

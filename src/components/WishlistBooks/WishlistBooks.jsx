@@ -1,6 +1,6 @@
+import CommonCard from "@/components/CommonCard/CommonCard";
+import WishlistContext from "@/contexts/WishlistContext";
 import { useContext } from "react";
-import WishlistContext from "../../contexts/WishlistContext";
-import CommonCard from "../CommonCard/CommonCard";
 
 const WishlistBooks = () => {
   const { wishlist, handleRemoveFromStorage } = useContext(WishlistContext);

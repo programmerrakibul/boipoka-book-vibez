@@ -1,11 +1,11 @@
-import { createBrowserRouter } from "react-router";
-import RootLayout from "../components/pages/Layouts/RootLayout";
-import HomeLayout from "../components/pages/Layouts/HomeLayout";
-import ListedBooks from "../components/pages/ListedBooks/ListedBooks";
-import PagesToRead from "../components/pages/PagesToRead/PagesToRead";
+import Loader from "@/components/Loader/Loader";
+import HomeLayout from "@/layouts/HomeLayout";
+import RootLayout from "@/layouts/RootLayout";
+import BookDetails from "@/pages/BookDetails/BookDetails";
+import ListedBooks from "@/pages/ListedBooks/ListedBooks";
+import PagesToRead from "@/pages/PagesToRead/PagesToRead";
 import axios from "axios";
-import Loader from "../components/Loader/Loader";
-import BookDetails from "../components/pages/BookDetails/BookDetails";
+import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
   {

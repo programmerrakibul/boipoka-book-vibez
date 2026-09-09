@@ -1,7 +1,6 @@
-import Banner from "../../Banner/Banner";
-import Books from "../../Books/Books";
-import Container from "../../Container";
-
+import Banner from "@/components/Banner/Banner";
+import Books from "@/components/Books/Books";
+import Container from "@/components/Container/Container";
 
 const HomeLayout = () => {
   return (

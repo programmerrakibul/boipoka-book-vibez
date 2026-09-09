@@ -1,6 +1,6 @@
+import CommonCard from "@/components/CommonCard/CommonCard";
+import ReadListContext from "@/contexts/ReadListContext";
 import { useContext } from "react";
-import ReadListContext from "../../contexts/ReadListContext";
-import CommonCard from "../CommonCard/CommonCard";
 
 const ReadBooks = () => {
   const { readList, handleRemoveFromStorage } = useContext(ReadListContext);
