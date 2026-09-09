@@ -1,10 +1,15 @@
 import BookCard from "@/components/BookCard/BookCard";
-import { useLoaderData } from "react-router";
+import Loader from "@/components/Loader/Loader";
+import { useGetBooksQuery } from "@/redux/books/booksAPI";
 
 const Books = () => {
-  const { data: booksData = [] } = useLoaderData();
+  const { data = [], isLoading } = useGetBooksQuery();
 
-  const bookElements = booksData.map((book) => (
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  const bookElements = data.map((book) => (
     <BookCard key={book.id} book={book} />
   ));
 

@@ -4,7 +4,6 @@ import RootLayout from "@/layouts/RootLayout";
 import BookDetails from "@/pages/BookDetails/BookDetails";
 import ListedBooks from "@/pages/ListedBooks/ListedBooks";
 import PagesToRead from "@/pages/PagesToRead/PagesToRead";
-import axios from "axios";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -16,7 +15,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomeLayout />,
-        loader: async () => await axios("./booksData.json"),
       },
       {
         path: "book-details/:id",

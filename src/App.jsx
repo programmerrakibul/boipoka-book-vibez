@@ -1,5 +1,7 @@
 import router from "@/app/router";
+import store from "@/redux/store";
 import makeServer from "@/server/server";
+import { Provider } from "react-redux";
 import { RouterProvider } from "react-router";
 
 makeServer({
@@ -7,7 +9,11 @@ makeServer({
 });
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 }
 
 export default App;
