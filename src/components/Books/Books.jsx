@@ -1,8 +1,9 @@
-import { useLoaderData } from "react-router";
 import BookCard from "@/components/BookCard/BookCard";
+import { useLoaderData } from "react-router";
 
 const Books = () => {
-  const { data: booksData } = useLoaderData();
+  const { data: booksData = [] } = useLoaderData();
+
   const bookElements = booksData.map((book) => (
     <BookCard key={book.id} book={book} />
   ));
