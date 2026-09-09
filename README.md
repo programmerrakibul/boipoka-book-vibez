@@ -1,6 +1,6 @@
 # Boi Poka Vibez
 
-Welcome to the Boi Poka Vibez project! This is a web application built with
+Welcome to the Boi Poka Book Vibez project! This is a web application built with
 React and Vite that allows users to discover and interact with books. The
 project is designed to provide a seamless reading experience, making it easy for
 users to browse, read, and manage their book collections.
@@ -20,8 +20,8 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    `git clone https://github.com/programmerrakibul/boipoka-book-vibez.git`
-2. Install the dependencies: `npm install`
-3. Start the development server: `npm run dev`
+2. Install the dependencies: `pnpm install`
+3. Start the development server: `pnpm dev`
 
 ## Usage
 
@@ -38,11 +38,11 @@ them to your wishlist, and remove them when you're done.
 - DaisyUI: The utility-first CSS framework for rapidly building custom user
   interfaces with Tailwind CSS.
 - React Router: The routing library for React.
-- Axios: The promise-based HTTP client for making API requests.
 - React Spinners: The library for displaying loading spinners in React.
 - React Toastify: The library for displaying toast notifications in React.
 - React Tabs: The library for creating tabbed interfaces in React.
 - Recharts: The charting library for React.
+- Redux Toolkit: To handle global state.
 
 ## Contributing
 

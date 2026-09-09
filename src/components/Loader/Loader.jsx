@@ -1,8 +1,15 @@
+import { cn } from "@/utils/cn";
 import { ScaleLoader } from "react-spinners";
 
-const Loader = () => {
+const Loader = ({ className, ...props }) => {
   return (
-    <div className="w-full h-dvh flex justify-center items-center relative">
+    <div
+      className={cn(
+        "w-full h-dvh flex justify-center items-center relative",
+        className,
+      )}
+      {...props}
+    >
       <ScaleLoader />
     </div>
   );
