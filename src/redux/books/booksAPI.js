@@ -13,15 +13,24 @@ export const booksAPI = createApi({
       query: () => ({
         url: "/",
       }),
+
       providesTags: (result) =>
         result
           ? [
               { type: "Books", id: "LIST" },
               ...result.map(({ id }) => ({ type: "Books", id })),
             ]
-          : [],
+          : { type: "Books", id: "LIST" },
+    }),
+
+    getBookById: builder.query({
+      query: (id) => ({
+        url: `/${id}`,
+      }),
+
+      providesTags: (_result, _error, id) => [{ type: "Books", id }],
     }),
   }),
 });
 
-export const { useGetBooksQuery } = booksAPI;
+export const { useGetBooksQuery, useGetBookByIdQuery } = booksAPI;

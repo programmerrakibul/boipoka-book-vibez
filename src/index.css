@@ -1,12 +1,19 @@
+@import "@fontsource-variable/playfair";
+@import "@fontsource-variable/work-sans";
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme inline {
+  --font-work-sans: "Work Sans", sans-serif;
+  --font-playfair-display: "Playfair Display", serif;
+}
+
 .btn {
-  @apply font-['work_sans'] text-base;
+  @apply font-work-sans text-base;
 }
 
 a.navlinks {
-  @apply text-[#131313cc] text-lg font-['Work_Sans'] font-medium bg-transparent transition-all duration-300 border border-transparent;
+  @apply text-[#131313cc] text-lg font-work-sans font-medium bg-transparent transition-all duration-300 border border-transparent;
 }
 
 a.navlinks:hover,

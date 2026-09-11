@@ -2,16 +2,17 @@ import { StarIcon } from "lucide-react";
 import { Link } from "react-router";
 
 const BookCard = ({ book }) => {
-  const { id, name, imageUrl, tags, author, category, rating } = book;
+  const { name, imageUrl, tags, author, category, rating, id } = book;
 
   return (
-    <Link to={`book-details/${id}`} state={book}>
+    <Link to={`book-details/${id}`}>
       <div className="p-5 border border-[#13131319] rounded-lg space-y-4 hover:scale-105 duration-300">
         <figure className="bg-[#F3F3F3] p-7 rounded-lg flex items-center justify-center">
           <img
             src={imageUrl}
             alt={name}
             className="aspect-3/2 object-contain"
+            loading="lazy"
           />
         </figure>
         <div className="space-y-2.5">

@@ -17,7 +17,14 @@ export default function makeServer({ environment = "development" } = {}) {
     namespace: "api",
     routes() {
       this.get("/books", (schema) => {
-        return schema.all("book").models
+        return schema.all("book").models;
+      });
+
+      this.get("/books/:id", (schema, request) => {
+        const id = request.params.id;
+        const book = schema.findBy("book", { id });
+
+        return book ? book.attrs : {};
       });
     },
   });

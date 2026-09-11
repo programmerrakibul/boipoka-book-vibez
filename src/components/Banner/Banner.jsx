@@ -8,6 +8,7 @@ const Banner = () => {
           src={heroImg}
           alt="Hero Book"
           className="max-w-sm rounded-lg shadow-2xl"
+          loading="eager"
         />
         <div>
           <h1 className="text-5xl font-bold">Box Office News!</h1>

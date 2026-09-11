@@ -1,15 +1,34 @@
 import Container from "@/components/Container/Container";
+import Loader from "@/components/Loader/Loader";
 import ReadListContext from "@/contexts/ReadListContext";
+import { useGetBookByIdQuery } from "@/redux/books/booksAPI";
 import { useContext } from "react";
-import { useLocation } from "react-router";
+import { useParams } from "react-router";
 
 const BookDetails = () => {
   const { handleAddToStorage } = useContext(ReadListContext);
-  const { state: book } = useLocation();
+  const { id } = useParams();
+  const { data = {}, isFetching, isLoading } = useGetBookByIdQuery(id);
+  const loading = isLoading || isFetching;
+
+  if (loading) {
+    return <Loader />;
+  }
+
+  if (!loading && Object.keys(data ?? {}).length === 0) {
+    return (
+      <>
+        <div>
+          <h1>Book not found</h1>
+        </div>
+      </>
+    );
+  }
+
   const {
     name,
     imageUrl,
-    tags,
+    tags = [],
     author,
     category,
     rating,
@@ -17,7 +36,7 @@ const BookDetails = () => {
     pages,
     publisher,
     publishYear,
-  } = book;
+  } = data;
 
   return (
     <section className="my-7 py-5">
@@ -85,13 +104,13 @@ const BookDetails = () => {
 
             <div className="space-x-3">
               <button
-                onClick={() => handleAddToStorage("read-list", book)}
+                onClick={() => handleAddToStorage("read-list", data)}
                 className="btn btn-outline"
               >
                 Read
               </button>
               <button
-                onClick={() => handleAddToStorage("wishlist", book)}
+                onClick={() => handleAddToStorage("wishlist", data)}
                 className="btn btn-info"
               >
                 Wishlist
