@@ -3,7 +3,7 @@ import Loader from "@/components/Loader/Loader";
 import { useGetBooksQuery } from "@/redux/books/booksAPI";
 
 const Books = () => {
-  const { data = [], isLoading } = useGetBooksQuery();
+  const { data = { ids: [], entities: {} }, isLoading } = useGetBooksQuery();
 
   return (
     <section className="my-7 py-4">
@@ -12,7 +12,7 @@ const Books = () => {
         {isLoading ? (
           <Loader className={"col-span-full"} />
         ) : (
-          data.map((book) => <BookCard key={book.id} book={book} />)
+          data.ids.map((id) => <BookCard key={id} book={data.entities[id]} />)
         )}
       </div>
     </section>

@@ -11,7 +11,9 @@
     "category": "Classic",
     "tags": ["Fiction", "Romance"],
     "publisher": "Scribner",
-    "publishYear": 1925
+    "publishYear": 1925,
+    "createdAt": "2024-01-05T09:15:32.000Z",
+    "updatedAt": "2024-03-12T14:22:47.000Z"
   },
   {
     "id": "Xp4Kd8Wm2Nv6RtHy",
@@ -25,7 +27,9 @@
     "category": "Fiction",
     "tags": ["Drama", "Social Justice"],
     "publisher": "J.B. Lippincott & Co.",
-    "publishYear": 1960
+    "publishYear": 1960,
+    "createdAt": "2024-01-18T11:42:09.000Z",
+    "updatedAt": "2024-05-27T08:36:51.000Z"
   },
   {
     "id": "Qz7Fj3Bw5Xc9VnLm",
@@ -39,7 +43,9 @@
     "category": "Fiction",
     "tags": ["Dystopian", "Political"],
     "publisher": "Secker & Warburg",
-    "publishYear": 1949
+    "publishYear": 1949,
+    "createdAt": "2024-02-02T16:08:24.000Z",
+    "updatedAt": "2024-06-14T19:55:03.000Z"
   },
   {
     "id": "Rt4Gd9Ym2Nv8BcKx",
@@ -53,7 +59,9 @@
     "category": "Fiction",
     "tags": ["Young Adult", "Identity"],
     "publisher": "Little, Brown and Company",
-    "publishYear": 1951
+    "publishYear": 1951,
+    "createdAt": "2024-02-19T07:33:57.000Z",
+    "updatedAt": "2024-07-01T12:11:38.000Z"
   },
   {
     "id": "Ws5Hp2Lq7Xc9VmNk",
@@ -67,7 +75,9 @@
     "category": "Classic",
     "tags": ["Romance", "Satire"],
     "publisher": "T. Egerton, Whitehall",
-    "publishYear": 1813
+    "publishYear": 1813,
+    "createdAt": "2024-03-07T13:26:45.000Z",
+    "updatedAt": "2024-08-09T10:47:22.000Z"
   },
   {
     "id": "Yt6Jr3Mn8Bv5CxLp",
@@ -81,7 +91,9 @@
     "category": "Fantasy",
     "tags": ["Adventure", "Epic"],
     "publisher": "Allen & Unwin",
-    "publishYear": 1937
+    "publishYear": 1937,
+    "createdAt": "2024-03-22T18:54:13.000Z",
+    "updatedAt": "2024-09-18T15:29:56.000Z"
   },
   {
     "id": "Zu7Kc4Pw9Nx6DmRq",
@@ -95,7 +107,9 @@
     "category": "Fantasy",
     "tags": ["Magic", "Young Adult"],
     "publisher": "Bloomsbury",
-    "publishYear": 1997
+    "publishYear": 1997,
+    "createdAt": "2024-04-10T05:17:41.000Z",
+    "updatedAt": "2024-10-25T20:03:14.000Z"
   },
   {
     "id": "Av8Ld5Bq2Wx9HnTc",
@@ -109,7 +123,9 @@
     "category": "Fiction",
     "tags": ["Philosophical", "Adventure"],
     "publisher": "HarperCollins",
-    "publishYear": 1988
+    "publishYear": 1988,
+    "createdAt": "2024-05-01T22:39:08.000Z",
+    "updatedAt": "2024-11-30T09:12:27.000Z"
   },
   {
     "id": "Bw9Me6Cr3Zy5NxGt",
@@ -123,6 +139,8 @@
     "category": "Mystery",
     "tags": ["Suspense", "Psychological"],
     "publisher": "Riverhead Books",
-    "publishYear": 2015
+    "publishYear": 2015,
+    "createdAt": "2024-06-15T03:48:36.000Z",
+    "updatedAt": "2025-01-08T17:41:52.000Z"
   }
 ]
