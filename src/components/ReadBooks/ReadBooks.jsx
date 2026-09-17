@@ -1,12 +1,14 @@
 import CommonCard from "@/components/CommonCard/CommonCard";
-import ReadListContext from "@/contexts/ReadListContext";
-import { useContext } from "react";
+import { selectReadListBooks } from "@/redux/saved/saved.selector";
+import { removeFromReadList } from "@/redux/saved/savedSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const ReadBooks = () => {
-  const { readList, handleRemoveFromStorage } = useContext(ReadListContext);
+  const readList = useSelector(selectReadListBooks);
+  const dispatch = useDispatch();
 
   const handleRemove = (id) => {
-    handleRemoveFromStorage("read-list", id);
+    dispatch(removeFromReadList(id));
   };
 
   return (

@@ -1,12 +1,14 @@
 import CommonCard from "@/components/CommonCard/CommonCard";
-import WishlistContext from "@/contexts/WishlistContext";
-import { useContext } from "react";
+import { selectWishlistBooks } from "@/redux/saved/saved.selector";
+import { removeFromWishlist } from "@/redux/saved/savedSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const WishlistBooks = () => {
-  const { wishlist, handleRemoveFromStorage } = useContext(WishlistContext);
+  const wishlist = useSelector(selectWishlistBooks);
+  const dispatch = useDispatch();
 
   const handleRemove = (id) => {
-    handleRemoveFromStorage("wishlist", id);
+    dispatch(removeFromWishlist(id));
   };
 
   return (

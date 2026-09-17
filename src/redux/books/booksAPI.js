@@ -1,5 +1,5 @@
 import { createEntityAdapter } from "@reduxjs/toolkit";
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 const booksAdapter = createEntityAdapter({
   selectId: (book) => book.id,

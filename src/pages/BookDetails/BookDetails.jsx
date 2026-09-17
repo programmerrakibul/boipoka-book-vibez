@@ -1,12 +1,11 @@
 import Container from "@/components/Container/Container";
 import Loader from "@/components/Loader/Loader";
-import ReadListContext from "@/contexts/ReadListContext";
 import { useGetBookByIdQuery } from "@/redux/books/booksAPI";
-import { useContext } from "react";
 import { useParams } from "react-router";
+import ReadButton from "./ReadButton";
+import WishlistButton from "./WishlistButton";
 
 const BookDetails = () => {
-  const { handleAddToStorage } = useContext(ReadListContext);
   const { id } = useParams();
   const { data = {}, isFetching, isLoading } = useGetBookByIdQuery(id);
   const loading = isLoading || isFetching;
@@ -103,18 +102,8 @@ const BookDetails = () => {
             </table>
 
             <div className="space-x-3">
-              <button
-                onClick={() => handleAddToStorage("read-list", data)}
-                className="btn btn-outline"
-              >
-                Read
-              </button>
-              <button
-                onClick={() => handleAddToStorage("wishlist", data)}
-                className="btn btn-info"
-              >
-                Wishlist
-              </button>
+              <ReadButton book={data} />
+              <WishlistButton book={data} />
             </div>
           </div>
         </div>
